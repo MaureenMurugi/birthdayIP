@@ -31,7 +31,16 @@ a quality-oriented projects.
 
 ## Technologies Used
 
->The entire webpage is written in HTML5, CSS and JavaScript.
+>The entire webpage is written in HTML5, CSS and JavaScript. On an IDE, VsCode.
 
 ## Contact Information
-My email address is 'maureen.murugi@student.moringaschool.com' With this, I am readily available.
+
+>My email address is 'maureen.murugi@student.moringaschool.com' With this, I am readily available.
+
+>You can easily explore some of the work I have done on my GitHub account, https://github.com/MaureenMurugi.
+
+### Licenses and Copyright
+
+>MIT
+
+>Copyright (c) 2021 **Maureen Murugi**
