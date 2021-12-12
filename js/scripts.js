@@ -22,6 +22,7 @@ let selectedYear = year;
 mth_element.textContent = months[month] + '' + year;
 
 selected_date_element.textContent = formatDate(date);
+selected_date_element.dataset.value = selectedDate;
 
 populateDates ();
 
