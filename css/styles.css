@@ -91,6 +91,8 @@ form .gender-details .category{
     border-color: #d9d9d9;
     background: #9b59b6;
 }
+
+/* dates */
 .date-picker{
     position: relative;
     width: 100%;
@@ -129,6 +131,29 @@ form .gender-details .category{
 .date-picker .dates.active {
     display: block;
 }
+.date-picker .dates .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+.date-picker .dates .month .arrows {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    font-size: 20px;
+}
+.date-picker .dates .month .arrows:hover {
+    background-color: #f3f3f3;
+}
+.date-picker .dates .month .arrows:active {
+    background-color: #71b7e6;
+}
+
+/* Form button */
 form input[type="radio"]{
     display: none;
 }
