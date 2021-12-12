@@ -21,8 +21,15 @@ let selectedYear = year;
 
 mth_element.textContent = months[month] + '' + year;
 
+selected_date_element.textContent = formatDate(date);
+
+populateDates ();
+
 //Event Listener
 date_picker_element.addEventListener('click', toggleDatePicker);
+next_mth_element.addEventListener('click', goToNextMonth);
+prev_mth_element.addEventListener('click', goToPrevMonth);
+
 
 //Functions
 function toggleDatePicker (e) {
@@ -30,6 +37,42 @@ function toggleDatePicker (e) {
 
     if(!checkEventPathForClass(e.path, 'dates')) {
         dates_element.classList.toggle('active');
+    }
+}
+
+function goToNextMonth (e) {
+    month++;
+    if (month > 11){
+        month = 0;
+        year++;
+    }
+    mth_element.textContent = months[month] + '' + year;
+}
+
+function goToPrevMonth (e) {
+    month--;
+    if (month < 0){
+        month = 11;
+        year--;
+    }
+    mth_element.textContent = months[month] + '' + year;
+}
+
+function populateDates (e) {
+    days_element.innerHTML = '';
+    let amount_days = 31;
+
+    if (month == 1) {
+        amount_days = 28;
+    }
+
+    for (let i = 0; i < amount_days; i++) {
+        const day_element = document.createElement('div');
+        day_element.classList.add('day');
+        day_element.textContent = i + 1;
+
+        days_element.appendChild(day_element);
+        
     }
 }
 
@@ -42,4 +85,20 @@ function checkEventPathForClass (path, selector) {
     }
 
     return false;
+}
+function formatDate (d) {
+    let day = d.getDate();
+    if (day < 10) {
+        day = '0' + day;
+
+    }
+
+    let month = d.getMonth() +1;
+    if (month < 10) {
+        month = '0' + month;
+    }
+    
+    let year = d.getFullYear();
+
+    return day + '/' + month + '/' + year;
 }
