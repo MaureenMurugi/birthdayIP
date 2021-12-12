@@ -108,6 +108,7 @@ form .gender-details .category{
 .date-picker:hover{
     background:#71b7e6
 }
+
 .date-picker .selected-date{
     width: 100%;
     height: 100%;
