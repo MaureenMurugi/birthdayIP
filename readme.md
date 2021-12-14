@@ -8,7 +8,7 @@
 
 >Whichever gender the user is, the project compares it to the day of birth i.e (weekdays) and gives a name to the user after the Ghana-Akan names. An example, a female born on Sunday her name would be Akosua.
 
->You do not only celebrate your day but also gets a chance to own a new Ghanian name.
+>You do not only celebrate your day but also gets a chance to own a new Ghanian name. Here is a live -site to the webpage, https://maureenmurugi.github.io/birthdayIP/
 
 ### Author's Information
 
