@@ -5,9 +5,13 @@ const mth_element =document.querySelector('.date-picker .dates .month .mth');
 const next_mth_element =document.querySelector('.date-picker .dates .month .next-mth');
 const prev_mth_element =document.querySelector('.date-picker .dates .month .prev-mth');
 const days_element = document.querySelector('.date-picker .dates .days');
+const gender_element = document.querySelector('.gender-details .category .dot-1','dot-2');
 
 const months = ['January','February','March','April','May','June','July','August','September',
 'October','November','December'];
+const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const femaleName = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
+const maleNames = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
 
 let date = new Date();
 let day = date.getDate();
@@ -30,6 +34,7 @@ populateDates ();
 date_picker_element.addEventListener('click', toggleDatePicker);
 next_mth_element.addEventListener('click', goToNextMonth);
 prev_mth_element.addEventListener('click', goToPrevMonth);
+gender_element.addEventListener('Click', nameGender);
 
 
 //Functions
@@ -94,6 +99,15 @@ function populateDates (e) {
         days_element.appendChild(day_element);
         
     }
+}
+
+function nameGender (e) {
+    if(document.getElementById("gender-details").checked) {
+        const femaleName = "dot-2"
+    }else{
+        const maleNames = "dot-1"
+    }
+
 }
 
 //Helper functions
